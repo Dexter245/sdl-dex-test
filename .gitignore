@@ -1,3 +1,14 @@
+nxlink
+build/
+*.elf
+*.nacp
+*.nro
+*.nso
+*.pfs0
+sdl-dex-test
+.idea/
+cmake-build-debug/
+
 # Prerequisites
 *.d
 
