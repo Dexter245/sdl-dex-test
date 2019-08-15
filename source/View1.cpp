@@ -2,16 +2,15 @@
 #include <iostream>
 
 
-View1::View1(Model1 *model) :
+View1::View1(Model1 &model) :
     model(model),
     background("background.png")
 {
     std::cout << "View1 constructor" << std::endl;
-//    this->model = model;
-//    this->background = new dex::Image("background.png");
+    std::cout << "background: " << &background << std::endl;
 }
 
 void View1::render() {
-//    std::cout << "View1::render" << std::endl;
+//    std::cout << "view1 render" << std::endl;
     background.draw(0, 0);
 }

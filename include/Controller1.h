@@ -3,18 +3,19 @@
 
 #include "Controller.h"
 #include "Model1.h"
-#include "EventHandler.h"
 #include "Application.h"
-#include "InputEventHandler.h"
+#include "Vibration.h"
+#include "Sixaxis.h"
 
 class Controller1 : public dex::Controller {
 
 private:
     Model1 *model;
-    dex::InputEventHandler inputEventHandler;
+    dex::Vibration vibration;
+    dex::Sixaxis sixaxis;
     SDL_GameController *gameController;
 
-    void handleEvents() override;
+    void handleEvents();
 
 public:
     explicit Controller1(Model1 *model);
