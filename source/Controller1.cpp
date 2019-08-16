@@ -49,8 +49,10 @@ void Controller1::handleEvents() {
                 dex::Application::instance().end();
             }
         }else if(e.type == SDL_CONTROLLERBUTTONDOWN){
-            std::cout << "buttondown" << std::endl;
-            dex::Application::instance().end();
+            if(e.jbutton.button == SDL_CONTROLLER_BUTTON_START){
+                std::cout << "buttondown" << std::endl;
+                dex::Application::instance().end();
+            }
         }
     }
 
